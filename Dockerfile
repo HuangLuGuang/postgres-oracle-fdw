@@ -5,7 +5,7 @@ FROM postgres:$postgres_version
 ENV PLV8_VERSION=2.3.14 \
     PLV8_SHASUM="9bfbe6498fcc7b8554e4b7f7e48c75acef10f07cf1e992af876a71e4dbfda0a6"
 
-ARG oracle_fdw_version=2_2_0
+ARG oracle_fdw_version=2_2_1
 ARG instantclient_version=19_3
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     postgresql-common \
     curl \
     ca-certificates \
-    p7zip \
+    p7zip 
 
 COPY sdk\ /tmp
 
